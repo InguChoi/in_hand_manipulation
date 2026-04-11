@@ -18,6 +18,24 @@ $(document).ready(function() {
     $(".navbar-menu").toggleClass("is-active");
   });
 
+  $(".video-category-tab").on("click", function() {
+    var targetId = $(this).data("video-target");
+
+    $(".video-category-tab")
+      .removeClass("is-active")
+      .attr("aria-selected", "false");
+    $(this)
+      .addClass("is-active")
+      .attr("aria-selected", "true");
+
+    $(".video-category-panel")
+      .removeClass("is-active")
+      .attr("hidden", true);
+    $("#" + targetId)
+      .addClass("is-active")
+      .removeAttr("hidden");
+  });
+
   if (typeof bulmaCarousel !== "undefined") {
     bulmaCarousel.attach(".carousel", {
       slidesToScroll: 1,

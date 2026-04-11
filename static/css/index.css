@@ -151,6 +151,109 @@ body {
   margin-bottom: 1rem;
 }
 
+.project-figure {
+  margin: 2rem 0;
+}
+
+.project-figure--compact {
+  margin: 0;
+}
+
+.project-figure__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid #e6e6e6;
+  background: #fff;
+}
+
+.project-figure__caption {
+  margin-top: 0.75rem;
+  text-align: center;
+  color: #5c5c5c;
+  font-size: 0.95rem;
+}
+
+.results-video-library {
+  margin-top: 2.5rem;
+}
+
+.results-video-library__header p {
+  color: #5c5c5c;
+  margin-bottom: 1rem;
+}
+
+.video-category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.video-category-tab {
+  border: 1px solid #d8d8d8;
+  background: #fff;
+  color: #3d3d3d;
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  font-family: "Google Sans", sans-serif;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.video-category-tab:hover,
+.video-category-tab.is-active {
+  background: #1f2937;
+  color: #fff;
+  border-color: #1f2937;
+}
+
+.video-category-panel {
+  display: none;
+}
+
+.video-category-panel.is-active {
+  display: block;
+}
+
+.video-embed-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.video-embed-card {
+  padding: 1rem;
+  border: 1px solid #e8e8e8;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.video-embed-card__title {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  font-family: "Google Sans", sans-serif;
+}
+
+.publication-video--grid {
+  margin-top: 0;
+}
+
+.video-embed-placeholder {
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border: 1px dashed #bdbdbd;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f5f7fa, #eef2f7);
+  color: #5c5c5c;
+  text-align: center;
+}
+
 .interpolation-placeholder {
   min-height: 340px;
 }
@@ -169,5 +272,10 @@ pre {
   .result-box__media,
   .interpolation-placeholder {
     min-height: 200px;
+  }
+
+  .video-category-tab {
+    flex: 1 1 calc(33.333% - 0.75rem);
+    text-align: center;
   }
 }

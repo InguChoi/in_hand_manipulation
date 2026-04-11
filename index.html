@@ -8,7 +8,7 @@
   >
   <meta
     name="keywords"
-    content="ICRA 2026, in-hand manipulation, sim-to-real, reinforcement learning, dexterous manipulation"
+    content="ICRA 2026, dexterous in-hand manipulation, re-orientation, sim-to-real, reinforcement learning"
   >
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Lessons from Learning Object Rotation for Sim-to-Real Deployment of In-Hand Manipulation Policies</title>
@@ -53,7 +53,7 @@
       <span class="icon">
         <i class="fas fa-home"></i>
       </span>
-      <span>ICRA 2026 Workshop</span>
+      <span>IEEE ICRA 2026 Workshop Dex Submission</span>
     </a>
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
@@ -78,7 +78,7 @@
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">Lessons from Learning Object Rotation for Sim-to-Real Deployment of In-Hand Manipulation Policies</h1>
           <div class="is-size-5 publication-venue">
-            ICRA 2026 Workshop Project Page
+            IEEE ICRA 2026 Workshop Dex Submission
           </div>
 
           <div class="is-size-5 publication-authors">
@@ -103,36 +103,29 @@
             <span class="author-block">This work was conducted at Fraunhofer IFF.</span>
           </div>
 
+          <div class="is-size-6 publication-authors">
+            <span class="author-block">
+              <strong>Keywords:</strong> Dexterous In-Hand Manipulation, Re-orientation, Sim-to-Real
+            </span>
+          </div>
+
           <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                <a
+                  href="https://openreview.net/forum?id=6JcWXzxAzQ&referrer=%5Bthe%20profile%20of%20Ingu%20Choi%5D(%2Fprofile%3Fid%3D~Ingu_Choi1)"
+                  class="external-link button is-normal is-rounded is-dark"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <span class="icon"><i class="fas fa-file-pdf"></i></span>
                   <span>Paper</span>
                 </a>
               </span>
               <span class="link-block">
                 <a href="#" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="ai ai-arxiv"></i></span>
-                  <span>Preprint</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon"><i class="fab fa-youtube"></i></span>
                   <span>Video</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fab fa-github"></i></span>
-                  <span>Code</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="far fa-images"></i></span>
-                  <span>Data</span>
                 </a>
               </span>
             </div>
@@ -143,51 +136,19 @@
   </div>
 </section>
 
-<section class="hero teaser">
+<section class="section">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <div class="teaser-placeholder">
-        <div class="teaser-placeholder__label">Observation Design Matters</div>
-        <p>
-          Replace this area with a teaser video, policy rollout, or system figure
-          for your in-hand manipulation setup.
-        </p>
-      </div>
-      <h2 class="subtitle has-text-centered">
-        More observations do not necessarily improve dexterous manipulation:
-        low-noise object pose and fingertip pose lead to the most stable sim-to-real deployment.
-      </h2>
-    </div>
-  </div>
-</section>
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <div class="carousel-card">
-            <div class="carousel-card__media">v3.06</div>
-            <p>The vanilla model with object pose and fingertip pose achieves the strongest overall performance.</p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="carousel-card">
-            <div class="carousel-card__media">Velocity Inputs</div>
-            <p>Velocity observations amplify sensor noise and cause unstable, oscillatory behavior near the goal.</p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="carousel-card">
-            <div class="carousel-card__media">Torque Inputs</div>
-            <p>Torque signals are hard to interpret reliably and rank among the weakest observation configurations.</p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="carousel-card">
-            <div class="carousel-card__media">Contact Signals</div>
-            <p>Explicit binary contact features provide limited value and can even reduce sim-to-real performance.</p>
-          </div>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Video</h2>
+        <div class="publication-video">
+          <iframe
+            src="https://www.youtube.com/embed/yn29rFTtzrw"
+            title="Project overview video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
     </div>
@@ -201,21 +162,29 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified publication-body">
           <p>
-            Recent advances in reinforcement learning have enabled impressive progress
-            in in-hand manipulation, yet sim-to-real transfer remains a major challenge
-            because of observation noise and complex contact dynamics. In this work, we
-            revisit a fundamental question: does adding more observations improve policy performance?
+            Recent advances in reinforcement learning have enabled significant progress
+            in dexterous in-hand manipulation. However, sim-to-real transfer remains a
+            major challenge, often due to discrepancies between simulated and real-world
+            observations. In this work, we revisit a fundamental question: does
+            providing more observations improve policy performance? To answer this, we
+            conduct a systematic ablation study on observation design for in-hand object
+            reorientation using a real robotic platform. We evaluate multiple policy
+            variants with different combinations of object state, fingertip pose,
+            velocity, torque, and contact signals.
           </p>
           <p>
-            We conduct a systematic study of observation design for in-hand object
-            reorientation, evaluating multiple policy variants with different combinations
-            of object state, fingertip information, velocity, torque, and contact signals.
-            Surprisingly, richer observations often degrade performance. Velocity and
-            torque signals introduce substantial noise and lead to unstable, oscillatory
-            behavior. Our experiments show that a minimal observation set consisting of
-            object pose and fingertip pose achieves the best performance and stability,
-            highlighting the importance of low-noise, well-structured observations for
-            robust dexterous manipulation.
+            Our results reveal two key findings. First, observations that suffer from
+            distribution mismatch, such as velocity, torque, and explicitly modeled
+            contact signals, consistently degrade real-world performance. These signals
+            introduce noise and inconsistency between simulation and reality, leading to
+            unstable and oscillatory behavior. Second, geometrically consistent
+            observations, particularly fingertip pose derived from forward kinematics,
+            significantly improve stability and control performance. Overall, we show
+            that increasing observation richness does not necessarily improve policy
+            performance. Instead, carefully designed observations that are consistent
+            across domains are essential for robust sim-to-real transfer. These findings
+            provide practical guidelines for designing deployable policies in
+            contact-rich robotic manipulation tasks.
           </p>
         </div>
       </div>
@@ -237,69 +206,22 @@
           </p>
         </div>
 
-        <div class="columns is-variable is-6">
-          <div class="column">
-            <div class="method-card">
-              <div class="method-card__media">System</div>
-              <h3 class="title is-5">System Overview</h3>
-              <p>Training happens in simulation, and the same frozen policy is copied to the real robotic platform for deployment.</p>
-            </div>
-          </div>
-          <div class="column">
-            <div class="method-card">
-              <div class="method-card__media">MLP Policy</div>
-              <h3 class="title is-5">Policy Representation</h3>
-              <p>An MLP with hidden dimensions [1024, 512, 256, 128] outputs 16 relative joint position targets at every step.</p>
-            </div>
-          </div>
-          <div class="column">
-            <div class="method-card">
-              <div class="method-card__media">Observations</div>
-              <h3 class="title is-5">Observation Ablation</h3>
-              <p>We compare object state, target state, robot state, action history, velocity, torque, and contact variants.</p>
-            </div>
-          </div>
-        </div>
+        <figure class="project-figure">
+          <img
+            src="./static/images/figure_system.png"
+            alt="Full training and inference pipeline"
+            class="project-figure__image"
+          >
+          <figcaption class="project-figure__caption">
+            <strong>Figure.</strong> `figure_system` shows the full training and inference pipeline.
+          </figcaption>
+        </figure>
 
-        <div class="content has-text-justified">
-          <p>
-            The observation space includes object pose, target orientation and error,
-            joint positions, fingertip pose, and previous action. We then explore how
-            adding or removing velocity, torque, and contact-related signals changes
-            real-world policy behavior.
-          </p>
-        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section interpolation-panel">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3 has-text-centered">Analysis and Lessons</h2>
-        <p class="has-text-centered comparison-copy">
-          The central lesson of this project is that noisy observations can be more harmful
-          than missing observations. This section is a good place for an ablation figure,
-          an interactive comparison, or a vanilla-versus-velocity rollout viewer.
-        </p>
-        <div id="interpolation-image-wrapper">
-          <div class="interpolation-placeholder">Observation Variant Comparison</div>
-        </div>
-        <input
-          class="slider is-fullwidth is-info"
-          id="interpolation-slider"
-          step="1"
-          min="0"
-          max="100"
-          value="0"
-          type="range"
-        >
-      </div>
-    </div>
-  </div>
-</section>
 
 <section class="section" id="results">
   <div class="container is-max-desktop">
@@ -309,47 +231,155 @@
 
         <div class="content has-text-justified">
           <p>
-            We evaluate the learned policy on predefined target orientations using
-            success rate, time-to-success, time-to-failure, and velocity variance.
-            Across these metrics, the vanilla model without velocity achieves the
-            best composite score and the smoothest behavior.
+            We summarize the ablation study with both a radar-chart comparison and a
+            table of metrics to highlight how each observation design affects sim-to-real
+            deployment performance.
           </p>
         </div>
 
-        <div class="columns is-variable is-6">
-          <div class="column">
-            <div class="result-box">
-              <div class="result-box__media">Radar Plot</div>
-              <h3 class="title is-5">Quantitative Evaluation</h3>
-              <p>Use this panel for the radar chart comparing all observation configurations across the evaluation metrics.</p>
+        <figure class="project-figure">
+          <img
+            src="./static/images/table.png"
+            alt="Table of ablation test results"
+            class="project-figure__image"
+          >
+          <figcaption class="project-figure__caption">
+            <strong>Table.</strong> `table` presents the ablation test results in tabular form.
+          </figcaption>
+        </figure>
+
+        <figure class="project-figure">
+          <img
+            src="./static/images/figure_radar.png"
+            alt="Radar chart of the ablation study results"
+            class="project-figure__image"
+          >
+          <figcaption class="project-figure__caption">
+            <strong>Figure.</strong> `figure_radar` summarizes the results of the ablation study.
+          </figcaption>
+        </figure>
+
+        <div class="results-video-library">
+          <div class="results-video-library__header">
+            <h3 class="title is-4">Model Videos</h3>
+            <p>
+              Select a model category below. Each version has five embed slots ready for
+              YouTube rollout videos.
+            </p>
+          </div>
+
+          <div class="video-category-tabs" role="tablist" aria-label="Model video categories">
+            <button class="video-category-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="video-panel-v01" data-video-target="video-panel-v01">v01</button>
+            <button class="video-category-tab" type="button" role="tab" aria-selected="false" aria-controls="video-panel-v02" data-video-target="video-panel-v02">v02</button>
+            <button class="video-category-tab" type="button" role="tab" aria-selected="false" aria-controls="video-panel-v03" data-video-target="video-panel-v03">v03</button>
+            <button class="video-category-tab" type="button" role="tab" aria-selected="false" aria-controls="video-panel-v04" data-video-target="video-panel-v04">v04</button>
+            <button class="video-category-tab" type="button" role="tab" aria-selected="false" aria-controls="video-panel-v05" data-video-target="video-panel-v05">v05</button>
+            <button class="video-category-tab" type="button" role="tab" aria-selected="false" aria-controls="video-panel-v06" data-video-target="video-panel-v06">v06</button>
+            <button class="video-category-tab" type="button" role="tab" aria-selected="false" aria-controls="video-panel-v07" data-video-target="video-panel-v07">v07</button>
+            <button class="video-category-tab" type="button" role="tab" aria-selected="false" aria-controls="video-panel-v08" data-video-target="video-panel-v08">v08</button>
+            <button class="video-category-tab" type="button" role="tab" aria-selected="false" aria-controls="video-panel-v09" data-video-target="video-panel-v09">v09</button>
+            <button class="video-category-tab" type="button" role="tab" aria-selected="false" aria-controls="video-panel-v10" data-video-target="video-panel-v10">v10</button>
+          </div>
+
+          <div id="video-panel-v01" class="video-category-panel is-active" role="tabpanel">
+            <div class="video-embed-grid">
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v01 - Video 1</h4><div class="publication-video publication-video--grid"><iframe src="https://www.youtube.com/embed/GbfL0IjS_yg" title="v01 video 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v01 - Video 2</h4><div class="publication-video publication-video--grid"><iframe src="https://www.youtube.com/embed/55cD_Q9RzC4" title="v01 video 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v01 - Video 3</h4><div class="publication-video publication-video--grid"><iframe src="https://www.youtube.com/embed/CJ8ZXh0z6AM" title="v01 video 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v01 - Video 4</h4><div class="publication-video publication-video--grid"><iframe src="https://www.youtube.com/embed/6MqAMRKUa2k" title="v01 video 4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v01 - Video 5</h4><div class="publication-video publication-video--grid"><iframe src="https://www.youtube.com/embed/KBCowWpIJD4" title="v01 video 5" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></div>
             </div>
           </div>
-          <div class="column">
-            <div class="result-box">
-              <div class="result-box__media">Success Scatter</div>
-              <h3 class="title is-5">Qualitative Analysis</h3>
-              <p>Highlight stable vanilla rollouts and contrast them with failure cases caused by noisy velocity or torque signals.</p>
+
+          <div id="video-panel-v02" class="video-category-panel" role="tabpanel" hidden>
+            <div class="video-embed-grid">
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v02 - Video 1</h4><div class="video-embed-placeholder">Paste the v02 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v02 - Video 2</h4><div class="video-embed-placeholder">Paste the v02 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v02 - Video 3</h4><div class="video-embed-placeholder">Paste the v02 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v02 - Video 4</h4><div class="video-embed-placeholder">Paste the v02 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v02 - Video 5</h4><div class="video-embed-placeholder">Paste the v02 YouTube embed URL here.</div></div>
             </div>
           </div>
-        </div>
 
-        <div class="content has-text-justified">
-          <p>
-            Our analysis shows that fingertip pose is critical for performance, while
-            explicit contact signals offer limited benefits. Velocity observations are
-            particularly harmful because numerical differentiation amplifies noise and
-            leads to high-frequency jitter in the control outputs.
-          </p>
-        </div>
+          <div id="video-panel-v03" class="video-category-panel" role="tabpanel" hidden>
+            <div class="video-embed-grid">
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v03 - Video 1</h4><div class="video-embed-placeholder">Paste the v03 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v03 - Video 2</h4><div class="video-embed-placeholder">Paste the v03 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v03 - Video 3</h4><div class="video-embed-placeholder">Paste the v03 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v03 - Video 4</h4><div class="video-embed-placeholder">Paste the v03 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v03 - Video 5</h4><div class="video-embed-placeholder">Paste the v03 YouTube embed URL here.</div></div>
+            </div>
+          </div>
 
-        <div class="publication-video">
-          <iframe
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="Project video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
+          <div id="video-panel-v04" class="video-category-panel" role="tabpanel" hidden>
+            <div class="video-embed-grid">
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v04 - Video 1</h4><div class="video-embed-placeholder">Paste the v04 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v04 - Video 2</h4><div class="video-embed-placeholder">Paste the v04 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v04 - Video 3</h4><div class="video-embed-placeholder">Paste the v04 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v04 - Video 4</h4><div class="video-embed-placeholder">Paste the v04 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v04 - Video 5</h4><div class="video-embed-placeholder">Paste the v04 YouTube embed URL here.</div></div>
+            </div>
+          </div>
+
+          <div id="video-panel-v05" class="video-category-panel" role="tabpanel" hidden>
+            <div class="video-embed-grid">
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v05 - Video 1</h4><div class="video-embed-placeholder">Paste the v05 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v05 - Video 2</h4><div class="video-embed-placeholder">Paste the v05 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v05 - Video 3</h4><div class="video-embed-placeholder">Paste the v05 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v05 - Video 4</h4><div class="video-embed-placeholder">Paste the v05 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v05 - Video 5</h4><div class="video-embed-placeholder">Paste the v05 YouTube embed URL here.</div></div>
+            </div>
+          </div>
+
+          <div id="video-panel-v06" class="video-category-panel" role="tabpanel" hidden>
+            <div class="video-embed-grid">
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v06 - Video 1</h4><div class="video-embed-placeholder">Paste the v06 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v06 - Video 2</h4><div class="video-embed-placeholder">Paste the v06 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v06 - Video 3</h4><div class="video-embed-placeholder">Paste the v06 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v06 - Video 4</h4><div class="video-embed-placeholder">Paste the v06 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v06 - Video 5</h4><div class="video-embed-placeholder">Paste the v06 YouTube embed URL here.</div></div>
+            </div>
+          </div>
+
+          <div id="video-panel-v07" class="video-category-panel" role="tabpanel" hidden>
+            <div class="video-embed-grid">
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v07 - Video 1</h4><div class="video-embed-placeholder">Paste the v07 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v07 - Video 2</h4><div class="video-embed-placeholder">Paste the v07 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v07 - Video 3</h4><div class="video-embed-placeholder">Paste the v07 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v07 - Video 4</h4><div class="video-embed-placeholder">Paste the v07 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v07 - Video 5</h4><div class="video-embed-placeholder">Paste the v07 YouTube embed URL here.</div></div>
+            </div>
+          </div>
+
+          <div id="video-panel-v08" class="video-category-panel" role="tabpanel" hidden>
+            <div class="video-embed-grid">
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v08 - Video 1</h4><div class="video-embed-placeholder">Paste the v08 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v08 - Video 2</h4><div class="video-embed-placeholder">Paste the v08 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v08 - Video 3</h4><div class="video-embed-placeholder">Paste the v08 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v08 - Video 4</h4><div class="video-embed-placeholder">Paste the v08 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v08 - Video 5</h4><div class="video-embed-placeholder">Paste the v08 YouTube embed URL here.</div></div>
+            </div>
+          </div>
+
+          <div id="video-panel-v09" class="video-category-panel" role="tabpanel" hidden>
+            <div class="video-embed-grid">
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v09 - Video 1</h4><div class="video-embed-placeholder">Paste the v09 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v09 - Video 2</h4><div class="video-embed-placeholder">Paste the v09 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v09 - Video 3</h4><div class="video-embed-placeholder">Paste the v09 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v09 - Video 4</h4><div class="video-embed-placeholder">Paste the v09 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v09 - Video 5</h4><div class="video-embed-placeholder">Paste the v09 YouTube embed URL here.</div></div>
+            </div>
+          </div>
+
+          <div id="video-panel-v10" class="video-category-panel" role="tabpanel" hidden>
+            <div class="video-embed-grid">
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v10 - Video 1</h4><div class="video-embed-placeholder">Paste the v10 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v10 - Video 2</h4><div class="video-embed-placeholder">Paste the v10 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v10 - Video 3</h4><div class="video-embed-placeholder">Paste the v10 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v10 - Video 4</h4><div class="video-embed-placeholder">Paste the v10 YouTube embed URL here.</div></div>
+              <div class="video-embed-card"><h4 class="video-embed-card__title">v10 - Video 5</h4><div class="video-embed-placeholder">Paste the v10 YouTube embed URL here.</div></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -363,8 +393,8 @@
         <h2 class="title">BibTeX</h2>
         <pre><code>@inproceedings{choi2026lessons,
   title     = {Lessons from Learning Object Rotation for Sim-to-Real Deployment of In-Hand Manipulation Policies},
-  author    = {Choi, Ingu and Hanes, Magnus and Park, Sungwoo},
-  booktitle = {ICRA 2026 Workshop},
+  author    = {Ingu Choi and Magnus Hanes and Sungwoo Park},
+  booktitle = {IEEE ICRA 2026 Workshop Dex Submission},
   year      = {2026}
 }</code></pre>
       </div>
